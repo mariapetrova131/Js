@@ -1,0 +1,494 @@
+@pink1: #fb8686;
+@pink2: #ff8a8a;
+@pink3: #ff6d6d;
+@gray: #ececec;
+
+
+
+
+
+// origin  https://gist.github.com/jayj/4012969
+// --------------------------------------------------
+// Flexbox LESS mixins
+// The spec: http://www.w3.org/TR/css3-flexbox
+// --------------------------------------------------
+
+// Flexbox display
+// flex or inline-flex
+.flex-display(@display: flex) {
+	display: ~"-webkit-@{display}";
+    display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
+    display: ~"-ms-@{display}"; // IE11
+    display: @display;
+}
+
+// The 'flex' shorthand
+// - applies to: flex items
+// <positive-number>, initial, auto, or none
+.flex(@columns: initial) {
+	-webkit-flex: @columns;
+	-ms-flex: @columns;
+	flex: @columns;
+}
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+.flex-direction(@direction: row) {
+	-webkit-flex-direction: @direction;
+	-ms-flex-direction: @direction;
+	flex-direction: @direction;
+}
+
+
+
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+.flex-wrap(@wrap: nowrap) {
+	-webkit-flex-wrap: @wrap;
+	-ms-flex-wrap: @wrap;
+	flex-wrap: @wrap;
+}
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+.flex-flow(@flow) {
+	-webkit-flex-flow: @flow;
+	-ms-flex-flow: @flow;
+	flex-flow: @flow;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+.flex-order(@order: 0) {
+	-webkit-order: @order;
+	-ms-order: @order;
+	order: @order;
+}
+
+// Flex grow factor
+// - applies to: flex items
+// <number>
+.flex-grow(@grow: 0) {
+	-webkit-flex-grow: @grow;
+	-ms-flex-grow: @grow;
+	flex-grow: @grow;
+}
+
+// Flex shrink
+// - applies to: flex item shrink factor
+// <number>
+.flex-shrink(@shrink: 1) {
+	-webkit-flex-shrink: @shrink;
+	-ms-flex-shrink: @shrink;
+	flex-shrink: @shrink;
+}
+
+// Flex basis
+// - the initial main size of the flex item
+// - applies to: flex itemsnitial main size of the flex item
+// <width>
+.flex-basis(@width: auto) {
+	-webkit-flex-basis: @width;
+	-ms-flex-basis: @width;
+	flex-basis: @width;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around
+.justify-content(@justify: flex-start) {
+	-webkit-justify-content: @justify;
+	-ms-justify-content: @justify;
+	justify-content: @justify;
+}
+
+// Packing Flex Lines
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch
+.align-content(@align: stretch) {
+	-webkit-align-content: @align;
+	-ms-align-content: @align;
+	align-content: @align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+.align-items(@align: stretch) {
+	-webkit-align-items: @align;
+	-ms-align-items: @align;
+	align-items: @align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch
+.align-self(@align: auto) {
+	-webkit-align-self: @align;
+	-ms-align-self: @align;
+	align-self: @align;
+}
+
+
+
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+
+
+
+
+
+
+
+.ba-first-text {
+	position: relative;
+	bottom: 400px;
+	text-align: center;
+}
+
+
+
+h1 {
+	font-family: exo;
+	font-weight: 100;
+	font-size: 3.5em;
+	width: 50%;
+	margin: auto;
+	margin-top: -97px;
+
+}
+
+h1:hover {
+	text-shadow: 1px 1px 1px lightgray;
+}
+
+
+h2 {
+	font-family: exo;
+	font-size: 2.3em;
+	font-weight: 500;
+}
+
+.redtext {
+	color: @pink1;
+}
+
+.ba-seventh-h2 {
+	color: white;
+}
+
+h3 {
+	// color: white;
+	font-family: exo;
+	font-weight: 500;
+}
+
+.ba-fifth-employee-col-h3 {
+	color: white;
+}
+
+.ba-fifth-employee-col-p {
+	color: white;
+}
+
+
+
+h4 {
+	color: @pink1;
+	font-family: exo;
+	font-weight: 500;
+}
+
+.fifth-employee-col-p {
+	color: white;
+	font-style: italic;
+}
+h6 {
+	font-family: exo;
+	font-weight: 400;
+	color: @pink1;
+	font-size: inherit;
+}
+
+
+p {
+	font-family: exo;
+	font-size: 1em;
+	font-weight: 400;
+}
+
+.sl {
+	max-width: 100%;
+}
+
+.sl-slide {
+	max-width: 100%;
+}
+
+
+.ba-first-text__button {
+	background-color: #ff6d6d;
+	color: white;
+	border: transparent;
+	font-family: exo;
+	font-weight: 100;
+	width: 180px;
+	margin-top: 140px;
+	height: 48px;
+	border-radius: 5px;
+	border: transparent;
+	
+}
+
+
+.ba-first-text__button:hover {
+	background-color: @pink2;
+}
+
+.ba-second {
+	.flex-display();
+	height: 720px;
+	margin-top: -220px;
+	
+}
+
+
+.ba-second-1 {
+	width: 60%;
+	padding-left: 10%;
+	padding-right: 15%;
+	.flex-display ();
+	.flex-direction(column);
+	.justify-content(center);
+}
+
+.ba-second-2 {
+	width: 40%;
+	background-image: -moz-linear-gradient(to top left, #fb8686 50%, #ececec 50% );
+	background-image:-webkit-linear-gradient(151deg, #fb8686 50%, #ececec 50% );
+	background-image:-o-linear-gradient(to top left, #fb8686 50%, #ececec 50% );
+
+}
+
+section {
+	.flex-display();
+	
+}
+
+.ba-third {
+	.flex-direction(column);
+	.align-items(center);
+	background-image: url(img/image1.jpg);
+	height: 675px;
+	justify-content: center;
+	
+}
+
+.ba-third-colums {
+	.flex-display();
+	.flex-direction(row);
+	width: 80%;
+	
+}
+
+.ba-third-colums-col {
+	.flex-display();
+	.flex-direction(column);
+	padding: 0 10px;
+	.align-items(center);
+	text-align: center;
+	.justify-content(center);
+
+}
+
+
+.ba-fourth {
+	height: 550px;
+	background-image: -moz-linear-gradient(50deg, #fb8686 35%, #ececec 35% );
+	background-image:-webkit-linear-gradient(50deg, #fb8686 35%, #ececec 35% );
+	background-image:-o-linear-gradient(50deg, #fb8686 35%, #ececec 35%  );
+
+
+}
+
+.ba-fourth-cor {
+	width: 80%;
+	margin: auto;
+	.flex-display();
+	
+
+}
+
+
+
+.ba-fifth {
+	background-image: url(img/triangles-Corporate-Landing-Page.jpg);
+	width: 100%;
+	height: 650px;
+	.flex-direction(column);
+	
+}
+
+
+.ba-fifth-employee {
+	.flex-display();
+	.flex-direction(row);
+	
+	align-items: center;
+	width: 80%;
+	margin: auto;
+}
+
+
+.ba-fifth-employee-col {
+	text-align: center;
+	padding: 0px 10px;
+}
+
+
+.ba-fifth-logo {
+	width: 80%;
+	.flex-display();
+	.flex-direction(row);
+	margin: auto;
+	.justify-content(space-around);
+}
+
+
+.ba-fifth-logo-1:hover {
+	opacity: 0.3;
+}
+
+
+.ba-fifth-logo-2:hover {
+	opacity: 0.3;
+}
+
+.ba-fifth-logo-3:hover {
+	opacity: 0.3;
+}
+
+.ba-fifth-logo-4:hover {
+	opacity: 0.3;
+}
+
+.ba-fifth-logo-5:hover {
+	opacity: 0.3;
+}
+
+
+.ba-sixth {
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	width: 80%;
+	margin: auto;
+}
+
+
+.ba-seventh {
+	background-color: #323969;
+	.flex-direction(column);
+	.align-items(center);
+	height: 460px;
+}
+
+
+input  {
+	width: 240px;
+	height: 42px;
+	background-color: #4d4778;
+	border: 1px solid white;
+	border-radius: 3px;
+	
+}
+
+
+.ba-seventh-form__button{
+	width: 240px;
+	height: 46px;
+	background-color: @pink2;
+	border: none;
+	border-radius: 3px;
+	color: white;
+	
+	
+}
+
+.ba-seventh-form__button:hover {
+	background-color: #4d4778;
+	color: white;
+	border: 1px solid @pink1;
+}
+
+.ba-seventh-form__p {
+	color: white;
+	
+}
+
+
+a:link {
+	color: white;
+}
+
+a:visited {
+	color: @pink1;
+}
+
+footer {
+	height: 330px;
+	.flex-display();
+	background-image: -moz-linear-gradient(to top left, #fb8686 30%, #fff 30% );
+	background-image:-webkit-linear-gradient(151deg, #fb8686 30%, #fff 30% );
+	background-image:-o-linear-gradient(to top left, #fb8686 30%, #fff 30% );
+
+}
+
+
+.border{
+	.flex-display();
+	width: 80%;
+	margin: auto;
+	.justify-content(space-around);
+}
+
+
+.ba-eighth-col {
+	width: 20%;
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+.ba-eighth-col__a , a  {
+	color: black;
+	text-decoration: none;
+	
+}
+
+
+.ba-eighth-col__a, a:hover {
+	color: gray;
+}
+
+.ba-eighth-col__email {
+	background-color: white;
+	border: 1px solid gray;
+}
+
+
+.ba-seventh-form > input {
+	color: white;
+}
